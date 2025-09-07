@@ -1,0 +1,42 @@
+{
+  "experiment_name": "ntp_top",
+  "description": "Next Token Prediction + Token Order Prediction experiment",
+  "objectives": ["ntp", "top"],
+  "model": {
+    "n_layer": 4,
+    "n_head": 8,
+    "d_model": 256,
+    "max_seq_len": 1024
+  },
+  "training": {
+    "seq_len": 512,
+    "batch_size": 8,
+    "learning_rate": 1e-4,
+    "weight_decay": 0.01,
+    "max_epochs": 10,
+    "grad_clip": 1.0
+  },
+  "data": {
+    "dataset": "wikitext-2",
+    "tokenizer": "gpt2",
+    "seq_len": 512
+  },
+  "loss_weights": {
+    "lambda_ntp": 1.0,
+    "lambda_mtp": 0.0,
+    "lambda_top": 0.5
+  },
+  "top_config": {
+    "window_size": 128,
+    "temperature": 1.0
+  },
+  "hardware": {
+    "gpu_type": "RTX 4090",
+    "expected_vram_gb": 8.5
+  },
+  "expected_results": {
+    "final_ppl": "~45-50",
+    "final_mrr": "~0.15-0.20",
+    "convergence_epochs": "~6-8"
+  }
+}
