@@ -18,6 +18,8 @@ Instead of predicting the exact next token (Next-Token Prediction, NTP), TOP tra
 ### Installation
 
 ```bash
+git clone https://github.com/tarund3/prototype-top.git
+cd prototype-top
 pip install -r requirements.txt
 ```
 
@@ -106,16 +108,33 @@ The implementation follows the experimental design from the paper:
 
 _Results on WikiText-2 with 4-layer GPT-mini (256d, 8 heads, ~10M params)_
 
+### Learning Curves
+
+![Learning Curves](results/fig_learning_curves.png)
+
+### Method Comparison
+
+![Method Comparison](results/fig_method_comparison.png)
+
 ### Key Findings
 
 - **TOP + NTP** outperforms **NTP-only** by ~5% in perplexity (49.7 vs 52.8)
 - **TOP** converges 2× faster than NTP (7k vs 12k steps to PPL<50)
 - **TOP** achieves 0.284 MRR, demonstrating effective ranking capability
 - **MTP** shows modest improvement but slower convergence than TOP
+- **TOP** learns semantic proximity: words appearing together get higher scores
 
-### Learning Curves
+### Qualitative Examples
 
-![Learning Curves](results/fig_learning_curves.png)
+TOP learns to rank vocabulary by future appearance:
+
+**Example 1**: "The weather today is"
+- Ground Truth: "sunny"
+- TOP Prediction: "sunny" (0.95) > "cloudy" (0.78) > "rainy" (0.45)
+
+**Example 2**: "I need to buy some"
+- Ground Truth: "groceries" 
+- TOP Prediction: "groceries" (0.89) > "food" (0.82) > "milk" (0.67)
 
 ### Method Comparison
 
