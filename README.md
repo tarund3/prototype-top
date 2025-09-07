@@ -136,6 +136,46 @@ TOP learns to rank vocabulary by future appearance:
 - Ground Truth: "groceries" 
 - TOP Prediction: "groceries" (0.89) > "food" (0.82) > "milk" (0.67)
 
+### Detailed Qualitative Analysis
+
+See [results/qualitative_examples.md](results/qualitative_examples.md) for comprehensive examples showing how TOP improves language modeling through semantic proximity learning.
+
+### Complete Results Report
+
+See [results/report.md](results/report.md) for the full experimental report including:
+- Detailed performance metrics
+- Hardware requirements and efficiency analysis
+- Reproducibility information
+- Complete visualizations
+
+### Results Files
+
+All experimental results are available in the `results/` directory:
+
+- **`metrics.csv`**: Raw experimental data and metrics
+- **`fig_learning_curves.png`**: Learning curves comparison
+- **`fig_method_comparison.png`**: Comprehensive method comparison
+- **`results_table.md`**: Formatted results table
+- **`qualitative_examples.md`**: Detailed qualitative analysis
+- **`report.md`**: Complete experimental report
+- **`track_experiments.py`**: Experiment logging utilities
+- **`plot_results.py`**: Visualization generation tools
+
+### Results Directory Structure
+
+```
+results/
+├── README.md                    # Results documentation
+├── metrics.csv                  # Raw experimental data
+├── fig_learning_curves.png     # Learning curves visualization
+├── fig_method_comparison.png   # Method comparison charts
+├── results_table.md            # Formatted results table
+├── qualitative_examples.md     # Detailed qualitative analysis
+├── report.md                   # Complete experimental report
+├── track_experiments.py        # Experiment logging utilities
+└── plot_results.py             # Visualization generation tools
+```
+
 ### Method Comparison
 
 ![Method Comparison](results/fig_method_comparison.png)
