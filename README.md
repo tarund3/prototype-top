@@ -110,11 +110,11 @@ _Results on WikiText-2 with 4-layer GPT-mini (256d, 8 heads, ~10M params)_
 
 ### Learning Curves
 
-![Learning Curves](results/fig_learning_curves.png)
+![Learning Curves](https://github.com/tarund3/prototype-top/raw/main/results/fig_learning_curves.png)
 
 ### Method Comparison
 
-![Method Comparison](results/fig_method_comparison.png)
+![Method Comparison](https://github.com/tarund3/prototype-top/raw/main/results/fig_method_comparison.png)
 
 ### Key Findings
 
@@ -178,7 +178,7 @@ results/
 
 ### Method Comparison
 
-![Method Comparison](results/fig_method_comparison.png)
+![Method Comparison](https://github.com/tarund3/prototype-top/raw/main/results/fig_method_comparison.png)
 
 ### Hardware Requirements
 
