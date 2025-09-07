@@ -78,6 +78,8 @@ tensorboard/
 !results/track_experiments.py
 !results/plot_results.py
 !results/qualitative_examples.md
+!results/*.png
+!results/*.csv
 
 # Streamlit
 .streamlit/
